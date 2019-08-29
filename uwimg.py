@@ -63,6 +63,10 @@ clamp_image = lib.clamp_image
 clamp_image.argtypes = [IMAGE]
 clamp_image.restype = None
 
+dump_image = lib.dump_image
+dump_image.argtypes = [IMAGE, c_char_p, c_float, c_float]
+dump_image.restype = None
+
 hsv_to_rgb = lib.hsv_to_rgb
 hsv_to_rgb.argtypes = [IMAGE]
 hsv_to_rgb.restype = None

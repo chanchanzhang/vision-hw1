@@ -22,7 +22,9 @@ int same_image(image a, image b){
     for(i = 0; i < a.w*a.h*a.c; ++i){
         if(!within_eps(a.data[i], b.data[i])) 
         {
-            printf("The value should be %f, but it is %f! \n", b.data[i], a.data[i]);
+            printf("%d, %d, %d, The value should be %f, but it is %f! \n",
+                i, i % (a.w * a.h) / a.w, i % (a.w * a.h) % a.w,
+                b.data[i], a.data[i]);
             return 0;
         }
     }
